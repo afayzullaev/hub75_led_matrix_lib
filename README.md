@@ -68,7 +68,8 @@ void app_main(void) {
     hub75_timer_init();    // SPI + timer config
 }
 ```
-🖋️ Displaying Text
+🖋️ **Displaying Text**
+
 ```c
 HUB75_CLEAR();
 
@@ -79,6 +80,7 @@ HUB75_PAINT_STR_CPY(); // Copy buffers to display
 ```
 
 🧠 **Memory Structure**
+
 ```c
 char rBuff[HEIGHT][WIDTH/8];  // Red channel
 char gBuff[HEIGHT][WIDTH/8];  // Green channel
@@ -94,6 +96,7 @@ Uses two hardware timers:
 Timers are initialized via hub75_timer_init().
 
 🧰 **To Do**
+
 	•	I2S parallel output mode
 	•	UTF-8/multilingual support
 	•	Brightness control
