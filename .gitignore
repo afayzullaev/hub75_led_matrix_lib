@@ -1,0 +1,8 @@
+build/
+sdkconfig
+sdkconfig.old
+main/monitor_anime.c
+main/monitor_anime.h
+CMakeLists.txt
+.vscode/
+.devcontainer/
