@@ -53,7 +53,6 @@ Edit these definitions in `hub75.h` as needed.
 - Затем то же самое происходит с **R2**, **G2**, **B2** — для нижней половины.
 - Эти цепочки влияют на порядок и формат отправки данных в массив `row_data`.
 
-Если у тебя подключен только **один цветной канал**, например `R1`, то управлять остальными цветами невозможно без полного подключения.
 
 ---
 
@@ -79,14 +78,14 @@ Puts_STR_8("World", 5, 0, 10, 0, 1, 0); // Green
 HUB75_PAINT_STR_CPY(); // Copy buffers to display
 ```
 
-🧠 Memory Structure
+🧠 **Memory Structure**
 ```c
 char rBuff[HEIGHT][WIDTH/8];  // Red channel
 char gBuff[HEIGHT][WIDTH/8];  // Green channel
 char bBuff[HEIGHT][WIDTH/8];  // Blue channel
 char row_data[16][48];        // SPI transfer row cache
 ```
-🔁 Refresh System
+🔁 **Refresh System**
 
 Uses two hardware timers:
 	•	Display refresh — every 500 µs
@@ -94,13 +93,13 @@ Uses two hardware timers:
 
 Timers are initialized via hub75_timer_init().
 
-🧰 To Do
+🧰 **To Do**
 	•	I2S parallel output mode
 	•	UTF-8/multilingual support
 	•	Brightness control
 	•	Line and rectangle primitives
 
-👨‍💻 Author
+👨‍💻 **Author**
 
 Developed by Alisher Fayzullaev
 ESP32 embedded developer / Indie Hacker
